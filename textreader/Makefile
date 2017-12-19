@@ -67,7 +67,7 @@ deploy:
 	package_lambda upload_lambda
 
 upload_lambda:
-	aws lambda update-function-code --function-name textreader --zip-file fileb://deploy_lambda.zip --region eu-west-1
+	aws lambda update-function-code --function-name textreaderdemo --zip-file fileb://deploy_lambda.zip --region eu-west-1
 
 package_lambda:
 	./package_lambda.sh

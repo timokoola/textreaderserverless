@@ -1,1 +1,11 @@
-wheel>=0.22
+arrow==0.12.0
+certifi==2017.11.5
+chardet==3.0.4
+idna==2.6
+oauthlib==2.0.6
+python-dateutil==2.6.1
+requests==2.18.4
+requests-oauthlib==0.8.0
+six==1.11.0
+twython==3.6.0
+urllib3==1.22
