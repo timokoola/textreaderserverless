@@ -1,5 +1,5 @@
 import string
-from typing import List, NamedTuple
+from typing import List, NamedTuple, Tuple
 
 
 def base_score(text: str, index: int) -> float:
@@ -36,6 +36,37 @@ class PivotPoint(NamedTuple):
     @property
     def total_length(self):
         return self.left_part_length + self.right_part_length
+
+
+class TextNode(NamedTuple):
+    # start index in the full text
+    start_index: int
+    # end index in the full text
+    end_index: int
+    split_point: PivotPoint
+    max_length: int
+    # always the full text
+    full_text: str
+
+    @classmethod
+    def split(cls, node: 'TextNode') -> Tuple['TextNode', 'TextNode']:
+        """Return left and right half of this tuple"""
+        left_start = node.start_index
+        left_end = left_start + node.split_point.split_at
+
+        left = TextNode(left_start, left_end, pivot_point(node.full_text[left_start:left_end + 1]), node.max_length,
+                        node.full_text)
+        right = TextNode(left_end + 1, node.end_index, pivot_point(node.full_text[left_end + 1:node.end_index + 1]),
+                         node.max_length, node.full_text)
+        return left, right
+
+    @property
+    def text(self):
+        return self.full_text[self.start_index:self.end_index + 1]
+
+    @property
+    def is_split_needed(self) -> bool:
+        return (self.end_index + 1 - self.start_index) >= self.max_length
 
 
 def pivot_point(text: str) -> PivotPoint:

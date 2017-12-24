@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba1c8d99-a1de-4814-bcc2-d9391a7b720b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/conftest.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_splitter.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/textreader/textsplitter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/textreader.iml" afterPath="$PROJECT_DIR$/.idea/textreader.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package_lambda.sh" afterPath="$PROJECT_DIR$/package_lambda.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_textreader.py" afterPath="$PROJECT_DIR$/test/test_textreader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/textreader/__init__.py" afterPath="$PROJECT_DIR$/textreader/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/textreader/textreader.py" afterPath="$PROJECT_DIR$/textreader/textreader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Untitled.ipynb" afterPath="$PROJECT_DIR$/Untitled.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_splitter.py" afterPath="$PROJECT_DIR$/test/test_splitter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/textreader/textsplitter.py" afterPath="$PROJECT_DIR$/textreader/textsplitter.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,8 +28,8 @@
       <file leaf-file-name="textsplitter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/textreader/textsplitter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-318">
-              <caret line="4" column="46" lean-forward="false" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+            <state relative-caret-position="466">
+              <caret line="51" column="67" lean-forward="false" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -71,8 +62,8 @@
       <file leaf-file-name="test_splitter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_splitter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <state relative-caret-position="417">
+              <caret line="82" column="21" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -360,14 +351,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/textreader/textreader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/conftest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -375,14 +358,6 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_splitter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -394,10 +369,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/textreader/textreader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_splitter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="82" column="21" lean-forward="false" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/textreader/textsplitter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-318">
-          <caret line="4" column="46" lean-forward="false" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+        <state relative-caret-position="466">
+          <caret line="51" column="67" lean-forward="false" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

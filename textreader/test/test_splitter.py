@@ -1,4 +1,4 @@
-from textreader.textsplitter import text_split, pivot_point
+from textreader.textsplitter import text_split, pivot_point, TextNode
 
 
 def test_no_empties_or_too_long(ulysses):
@@ -78,3 +78,18 @@ def test_split_timo():
     assert ti_mo.total_length == 4
     assert ti_mo.split_at == 1
     assert ti_mo.left_part_length == ti_mo.right_part_length
+
+
+def test_timo_node():
+    # GIVEN
+    ti_mo = TextNode(0, 3, pivot_point("timo"), 2, "timo")
+    # WHEN
+    tl, tr = TextNode.split(ti_mo)
+
+    # THEN
+    assert tl.start_index == 0
+    assert tl.end_index == 1
+    assert tr.start_index == 2
+    assert tr.end_index == 3
+    assert tl.full_text == tr.full_text
+    assert tl.text + tr.text == tl.full_text
