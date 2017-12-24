@@ -63,13 +63,12 @@ docs:
 	$(MAKE) -C docs html
 	open docs/_build/html/index.html
 
-deploy:
-	package_lambda upload_lambda
-
 upload_lambda:
-	aws lambda update-function-code --function-name textreaderdemo --zip-file fileb://deploy_lambda.zip --region eu-west-1
+	aws lambda update-function-code --function-name textreaderdemo --zip-file fileb://deploy_lambda.zip --region us-east-1
 
 package_lambda:
-	./package_lambda.sh
+	sh package_lambda.sh
+
+deploy: package_lambda upload_lambda
 
 

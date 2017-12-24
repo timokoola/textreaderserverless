@@ -5,15 +5,13 @@ import pytest
 from textreader import textreader
 
 
-class TestTextreader(object):
+def test_lambda_simple_call():
+    # GIVEN
+    # WHEN
+    result = textreader.lambda_handler({},{})
 
-    @classmethod
-    def setup_class(cls):
-        pass
 
-    def test_something(self):
-        pass
+    # THEN
+    assert "text" in result
+    assert "T" in result["text"]
 
-    @classmethod
-    def teardown_class(cls):
-        pass
