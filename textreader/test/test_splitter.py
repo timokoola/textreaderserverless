@@ -1,4 +1,7 @@
-from textreader.textsplitter import text_split, pivot_point, TextNode
+import random
+import string
+
+from textreader.textsplitter import text_split, pivot_point, TextNode, TreeNode
 
 
 def test_no_empties_or_too_long(ulysses):
@@ -93,3 +96,45 @@ def test_timo_node():
     assert tr.end_index == 3
     assert tl.full_text == tr.full_text
     assert tl.text + tr.text == tl.full_text
+
+
+def test_timo_tree():
+    # GIVEN
+    ti_mo = TextNode(0, 3, pivot_point("timo"), 40, "timo")
+
+    # WHEN
+    timotree = TreeNode(ti_mo, None, None)
+
+    # THEN
+    assert timotree.ready
+    assert ti_mo.full_text == "timo"
+
+
+def test_split_node_tree():
+    # GIVEN
+    r = random.Random(1235)
+    text = "".join([r.choice(string.ascii_letters) for x in range(128)])
+    tn = TextNode.from_text(text, 32)
+
+    # WHEN
+    tree_node = TreeNode(tn, None, None)
+    tree_node.handle()
+    full_text = " ".join(tree_node.collect())
+
+    # THEN
+    assert full_text == tree_node.root_node.full_text
+
+
+def test_split_ulysses_node_tree(ulysses):
+    # GIVEN
+    tn = TextNode.from_text(ulysses, 280)
+
+    # WHEN
+    tree_node = TreeNode(tn, None, None)
+    tree_node.handle()
+    collected = tree_node.collect()
+    full_text = " ".join(collected)
+
+    # THEN
+    assert full_text == tree_node.root_node.full_text
+    assert len(collected) == 123
